@@ -10,6 +10,11 @@
         "src": "/.*",
         "dest": "app.py"
       }
+    ],
+    "env": {
+        "GUNICORN_CMD_ARGS": "--workers=4 --bind=0.0.0.0:$PORT"
+    },
+    "aliases": [
+        "gunicorn-app:python -m gunicorn app:app"
     ]
-  }
-  
+}
