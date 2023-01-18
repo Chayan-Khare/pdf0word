@@ -1,0 +1,6 @@
+[build]
+  command = "pip install -r requirements.txt"
+  publish = "app/"
+
+[dev]
+  command = "gunicorn --bind 0.0.0.0:$PORT app:app"
